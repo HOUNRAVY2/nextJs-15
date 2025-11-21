@@ -1,0 +1,53 @@
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+  
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .menu-in {
+    right: 0;
+    animation-name: menuin;
+    animation-duration: 0.5s;
+  }
+  
+  .menu-out {
+    right: -2000px;
+    animation-name: menuout;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes menuin {
+    from {
+      right: -2000px;
+      display: none;
+    }
+  
+    to {
+      display: block;
+      right: 0;
+    }
+  }
+  
+  @keyframes menuout {
+    from {
+      display: block;
+      right: 0;
+    }
+  
+    to {
+      right: -2000px;
+      display: none;
+    }
+  }
